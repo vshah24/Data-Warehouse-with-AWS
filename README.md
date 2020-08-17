@@ -5,8 +5,13 @@ A startup **Sparkify** (music streaming company) has grown their user base and s
 
 As a data engineer we will build an ETL pipeline(Extract, Transform, Load) to create Database and tables in AWS Redshift Cluster.We will extract data in json files format from s3 bucket, process and transform the data and load the data to AWS Redshift DB as a set of dimensional tables for their analytics team to analyze the user behaviour. 
 
+
+## Technologies Used 
+  Python, SQL, AWS S3 and AWS Redshift DB.
+
+
 ## Data
-The data is located in Amazon s3 bucket located at `s3://udacity-dend/log_data` and `s3://udacity-dend/song_data` containing log data and songs data respectively.
+The data is in Amazon s3 bucket located at `s3://udacity-dend/log_data` and `s3://udacity-dend/song_data` containing log data and songs data respectively.
 
 
 
@@ -55,5 +60,3 @@ The data is located in Amazon s3 bucket located at `s3://udacity-dend/log_data` 
       * The data is loaded in the tables inside your redshift database.You can use Query Editor in the AWS Redshift console for this.
 7. Delete the redshift cluster when finished so we don't pay for it unecessarily.
 
-## Technologies Used 
-  Python, SQL, AWS S3 and AWS Redshift DB.
