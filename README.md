@@ -50,9 +50,9 @@ The data is on Amazon s3 bucket located at `s3://udacity-dend/log_data` and `s3:
 3. Enter all the credentials in dwh.cfg file.
 4. Run sql_queries.py.
 5. Run create_tables.py
-    *. Check the table schemas in your redshift database. You can use Query Editor in the AWS Redshift console for this.
+      * Check the table schemas in your redshift database. You can use Query Editor in the AWS Redshift console for this.
 6. Run etl.py
-    *. The data is loaded in the tables inside your redshift database.You can use Query Editor in the AWS Redshift console for this.
+      * The data is loaded in the tables inside your redshift database.You can use Query Editor in the AWS Redshift console for this.
 7. Delete the redshift cluster when finished so we don't pay for it unecessarily.
 
    
