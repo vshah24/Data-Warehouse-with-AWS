@@ -35,27 +35,24 @@ The data is on Amazon s3 bucket located at `s3://udacity-dend/log_data` and `s3:
     
     
 ## Project Files
-  1. **dwh.cfg** - It stores Amazon Redshift Clusters credentials and IAM role to access the cluster.
-  2. **sql_queries.py** - .
-  3. **create_tables.py** - creates fact and dimension tables in Redshift.
+  1. **dwh.cfg** - It stores Amazon Redshift Clusters credentials that gives access to launch a redshift cluster and IAM role that has read access to s3.
+  2. **sql_queries.py** - It stores sql statements (create, drop, insert) in String format. It also has a copy statement that extracts data from s3 and loads to staging tables.
+  3. **create_tables.py** - creates/drop fact and dimension tables in Redshift.
   4. **etl.py** - Defines the ETL pipeline, which extracts the json data from s3 , processes it and loads them to Redshift.
-  
-  
-## Project Steps
-Below are steps you can follow to complete each component of this project.
+ 
 
-1. Create Table Schemas
-  * Design schemas for your fact and dimension tables
-  * Write a SQL CREATE statement for each of these tables in sql_queries.py
-  * Complete the logic in create_tables.py to connect to the database and create these tables
-  * Write SQL DROP statements to drop tables in the beginning of create_tables.py if the tables already exist. This way, you can run create_tables.py whenever you want to reset your database and test your ETL pipeline.
-  * Launch a redshift cluster and create an IAM role that has read access to S3.
-  * Add redshift database and IAM role info to dwh.cfg.
-  * Test by running create_tables.py and checking the table schemas in your redshift database. You can use Query Editor in the AWS Redshift console for this.
   
-2. Build ETL Pipeline
-  * Implement the logic in etl.py to load data from S3 to staging tables on Redshift.
-  * Implement the logic in etl.py to load data from staging tables to analytics tables on Redshift.
-  * Test by running etl.py after running create_tables.py and running the analytic queries on your Redshift database to compare your results with the expected results.
-  * Delete your redshift cluster when finished.
+  
+## How to run the project
+
+1. Create an IAM role and attached the AmazonS3ReadOnlyAccess Policy to this IAM. 
+2. Create a dc2.large Redshift Cluster with 4 nodes.
+3. Enter all the credentials in dwh.cfg file.
+4. Run sql_queries.py.
+5. Run create_tables.py
+  * Check the table schemas in your redshift database. You can use Query Editor in the AWS Redshift console for this.
+6. Run etl.py
+  * The data is loaded in the tables inside your redshift database.You can use Query Editor in the AWS Redshift console for this.
+7. Delete the redshift cluster when finished so we don't pay for it unecessarily.
+
    
