@@ -44,8 +44,8 @@ The data is in Amazon s3 bucket located at `s3://udacity-dend/log_data` and `s3:
 5. **time** - timestamps of records in songplays broken down into specific units
 
     ```start_time, hour, day, week, month, year, weekday```
-    
-    
+
+ 
 ## Project Files
   1. **dwh.cfg** - It stores Amazon Redshift Clusters credentials that gives access to launch a redshift cluster and IAM role that has read access to s3.
   2. **sql_queries.py** - It stores sql statements (create, drop, insert) in String format. It also has a copy statement that extracts data from s3 and loads to staging tables.
