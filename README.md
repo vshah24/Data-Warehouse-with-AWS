@@ -3,7 +3,12 @@
 ## Overview
 A startup **Sparkify** (music streaming company) has grown their user base and song database and want to move their processes and data from on-premise onto cloud. In this project we will use two Amazon web services `S3 (data storage)` and `Redshift (data warehouse)`.
 
-As a data engineer we will build an ETL pipeline(Extract, Transform, Load) to create Database and tables in AWS Redshift Cluster.We will extract data in json files format from s3 bucket, process and transform the data and load the data to AWS Redshift DB as a set of dimensional tables for their analytics team to analyze the user behaviour. 
+As a data engineer we will build an ETL pipeline(Extract, Transform, Load) to create Database and tables in AWS Redshift Cluster.
+* **Extract** - We will extract data format from Amazon s3 bucket.
+* **Transform** - We will perform data transformation as set of dimensional and fact tables.
+* **Load** - We will load the transformed data to AWS Redshift DB
+
+The analytics team can now use the tables loaded on AWS Redshift DB to analyze the user behaviour, making it easier for them as they don't have to deal with multiple json files.
 
 
 ## Technologies Used 
@@ -50,13 +55,13 @@ The data is in Amazon s3 bucket located at `s3://udacity-dend/log_data` and `s3:
   
 ## How to run the project
 
-1. Create an IAM role and attach the AmazonS3ReadOnlyAccess Policy to this IAM. 
-2. Create a dc2.large Redshift Cluster with 4 nodes.
-3. Enter all the credentials of your cluster and IAM role in dwh.cfg file.
-4. Run sql_queries.py.
-5. Run create_tables.py
+1. Create an **IAM role** and attach the **AmazonS3ReadOnlyAccess** Policy to this IAM. 
+2. Create a **dc2.large Redshift Cluster** with 4 nodes.
+3. Enter all the **credentials** of your cluster and IAM role in **dwh.cfg file**.
+4. Run **sql_queries.py**.
+5. Run **create_tables.py**
       * Check the table schemas in your redshift database. You can use Query Editor in the AWS Redshift console for this.
-6. Run etl.py (ETL Process)
+6. Run **etl.py** (ETL Process)
       * The data is loaded in the tables inside your redshift database.You can use Query Editor in the AWS Redshift console for this.
-7. Delete the redshift cluster when finished so we don't pay for it unecessarily.
+7. **Delete** the redshift **cluster** when finished so we don't pay for it unecessarily.
 
