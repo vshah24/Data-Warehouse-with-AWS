@@ -17,18 +17,12 @@ The analytics team can now use the tables loaded on AWS Redshift DB to analyze t
   Python, SQL, AWS S3 and AWS Redshift DB.
 
 
-## Data
+## Dataset
 The data is in Amazon s3 bucket located at `s3://udacity-dend/log_data` and `s3://udacity-dend/song_data` containing log data and songs data respectively.
 
 
 
 ## Database Schema - 
-
-#### Staging Tables 
-Used to stage raw files from S3 into Redshift for further transformation.
- * staging_events
- * staging_songs
- 
 #### Fact Tables
 1. **Songplays** - records in log data associated with song plays i.e. records with page `Next Song`
   
@@ -64,7 +58,7 @@ Used to stage raw files from S3 into Redshift for further transformation.
 ## How to run the project
 
 1. Create an **IAM role** and attach the **AmazonS3ReadOnlyAccess** Policy to this IAM. 
-2. Create a **dc2.large Redshift Cluster** with 4 nodes having **AmazonRedshiftFullAcces** .
+2. Create a **dc2.large Redshift Cluster** with 4 nodes.
 3. Enter all the **credentials** of your cluster and IAM role in **dwh.cfg file**.
 4. Run **sql_queries.py**.
 5. Run **create_tables.py**
