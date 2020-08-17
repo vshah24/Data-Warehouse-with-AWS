@@ -1,4 +1,4 @@
-# Data Warehouse Project with S3 and Redshift
+# Data Warehouse Project with Amazon S3 and Redshift-
 
 ## Overview
 A startup **Sparkify** (music streaming company) has grown their user base and song database and want to move their processes and data from on-premise onto cloud. In this project we will use two Amazon web services `S3 (data storage)` and `Redshift (data warehouse)`.
@@ -55,6 +55,5 @@ The data is located in Amazon s3 bucket located at `s3://udacity-dend/log_data` 
       * The data is loaded in the tables inside your redshift database.You can use Query Editor in the AWS Redshift console for this.
 7. Delete the redshift cluster when finished so we don't pay for it unecessarily.
 
-  ## Summary 
- Project builds an ETL pipeline (Extract, Transform, Load) to create the DB and tables in AWS Redshift cluster, fetch data from JSON files stored in AWS S3, process the data, and insert the data to AWS Redshift DB. 
- Technologies used for this Project : Python, SQL, AWS S3 and AWS Redshift DB.
+## Technologies Used 
+  Python, SQL, AWS S3 and AWS Redshift DB.
