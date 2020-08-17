@@ -14,7 +14,7 @@ The data is on Amazon s3 bucket located at `s3://udacity-dend/log_data` and `s3:
 #### Fact Tables
 1. **Songplays** - records in log data associated with song plays i.e. records with page `Next Song`
   
-    ```songplay_id, start_time, user_id, level, song_id, artist_id, session_id, location, user_agent```
+  ```songplay_id, start_time, user_id, level, song_id, artist_id, session_id, location, user_agent```
 
 #### Dimension Tables
 2. **users** - users in the app
@@ -35,8 +35,10 @@ The data is on Amazon s3 bucket located at `s3://udacity-dend/log_data` and `s3:
     
     
 ## Project Files
-  1. **song_data/ and log_data/** - contains song and log files on user activity in json format.
+  1. **dwh.cfg** - It stores Amazon Redshift Clusters credentials and IAM role credentials.
   2. **sql_queries.py** - Contains sql queries that has a creation,insertion and dropping templates of fact and dimension tables.
   3. **create_tables.py** - creates fact and dimension tables in Redshift.
-  5. **etl.py** - Defines the ETL pipeline, which extracts the json data from s3 , processes it and loads them to Redshift.
+  4. **etl.py** - Defines the ETL pipeline, which extracts the json data from s3 , processes it and loads them to Redshift.
   
+  
+   
