@@ -3,10 +3,10 @@
 ## Overview
 A startup **Sparkify** (music streaming company) has grown their user base and song database and want to move their processes and data from on-premise onto cloud. In this project we will use two Amazon web services `S3 (data storage)` and `Redshift (data warehouse)`.
 
-As a data engineer we will build an ETL pipeline that extracts data from S3, stages them in Redshift, and transforms data into a set of dimensional tables for their analytics team to analyze the user behaviour. 
+As a data engineer we will build an ETL pipeline(Extract, Transform, Load) to create Database and tables in AWS Redshift Cluster.We will extract data in json files format from s3 bucket, process and transform the data and load the data to AWS Redshift DB as a set of dimensional tables for their analytics team to analyze the user behaviour. 
 
 ## Data
-The data is on Amazon s3 bucket located at `s3://udacity-dend/log_data` and `s3://udacity-dend/song_data` containing log data and songs data respectively.
+The data is located in Amazon s3 bucket located at `s3://udacity-dend/log_data` and `s3://udacity-dend/song_data` containing log data and songs data respectively.
 
 
 
@@ -45,14 +45,16 @@ The data is on Amazon s3 bucket located at `s3://udacity-dend/log_data` and `s3:
   
 ## How to run the project
 
-1. Create an IAM role and attached the AmazonS3ReadOnlyAccess Policy to this IAM. 
+1. Create an IAM role and attach the AmazonS3ReadOnlyAccess Policy to this IAM. 
 2. Create a dc2.large Redshift Cluster with 4 nodes.
-3. Enter all the credentials in dwh.cfg file.
+3. Enter all the credentials of your cluster and IAM role in dwh.cfg file.
 4. Run sql_queries.py.
 5. Run create_tables.py
       * Check the table schemas in your redshift database. You can use Query Editor in the AWS Redshift console for this.
-6. Run etl.py
+6. Run etl.py (ETL Process)
       * The data is loaded in the tables inside your redshift database.You can use Query Editor in the AWS Redshift console for this.
 7. Delete the redshift cluster when finished so we don't pay for it unecessarily.
 
-   
+  ## Summary 
+ Project builds an ETL pipeline (Extract, Transform, Load) to create the DB and tables in AWS Redshift cluster, fetch data from JSON files stored in AWS S3, process the data, and insert the data to AWS Redshift DB. 
+ Technologies used for this Project : Python, SQL, AWS S3 and AWS Redshift DB.
